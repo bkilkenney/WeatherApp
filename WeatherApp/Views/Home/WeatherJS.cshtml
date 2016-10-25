@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "WeatherJS";
+}
+
+<h2>WeatherJS</h2>
+
+<p id="reply">
+
+</p>
+
+<button>Get Weather</button>
+
+<script>
+    $(document).ready(function() {
+        $("button").click(function(){
+            $.get("http://api.openweathermap.org/data/2.5/weather?q=Cleveland&APPID=f8c2956de60977de70b208aecbdd3a44&units-imperial", function(response) {                                      //The code that will be returned after you call your function
+                response
+            });
+        });        
+    });                                                     //aJax get call, 1st parameter is the url, 2nd is anonymous func,
+</script>
